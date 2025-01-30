@@ -1,5 +1,6 @@
 import React from 'react';
 
+//Transaction table display head and body where it display  month , amount and reward point
 export const TransactionTable = ({ transactions, calculateRewardPoints }) => {
     return (
         <table className="table">
@@ -12,7 +13,7 @@ export const TransactionTable = ({ transactions, calculateRewardPoints }) => {
             </thead>
             <tbody>
                 {transactions.map((transaction) => (
-                    <tr key={transaction.month}>
+                    <tr key={transaction.id}>
                         <td>{transaction.month}</td>
                         <td>${transaction.amountSpent}</td>
                         <td>{calculateRewardPoints(transaction.amountSpent)}</td>

@@ -12,8 +12,9 @@ export const CustomerList = () => {
         }, 1000);
     }, []);
 
+    // Sample data passed in customer component
     return (
-        <div className="customer-list">
+        <div className="list">
             {customersData.length === 0 ? (
                 <p>Loading data...</p>
             ) : (

@@ -24,9 +24,11 @@ export const Customer = ({ customer }) => {
         })
         return total;
     };
+
+    // Map Sample data which respect to customer 
     return (
         <div className="card">
-            <h3>Customer {customer.customerId}</h3>
+            <h3>Customer: {customer.name}</h3>
             <TransactionTable transactions={customer.transactions}
                 calculateRewardPoints={calculateReward} />
             <RewardPoints transactions={customer.transactions} calculateTotalPoints={calculateTotalPoints} />
