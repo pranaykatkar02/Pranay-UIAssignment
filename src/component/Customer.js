@@ -16,9 +16,6 @@ export const Customer = ({ customer }) => {
     //Function to calculate total reward point
     const calculateTotalPoints = (transaction) => {
         let total = 0;
-        // for (let i = 0; i < trans.length; i++) {
-        //     total += calculateRewardPoints(trans[i].amountSpent);
-        // }
         transaction.map((transactionVal) => {
             total += calculateReward(transactionVal.amountSpent);
         })
